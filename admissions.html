@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приемная комиссия | Экономико-правовой техникум</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-xl font-bold">Экономико-правовой техникум</h1>
+        </div>
+    </header>
+
+    <!-- Заголовок -->
+    <section class="bg-yellow-500 text-blue-900 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold">Приемная комиссия 2026</h1>
+            <p class="mt-4 text-xl">Подайте документы онлайн или лично</p>
+        </div>
+    </section>
+
+    <!-- Основное содержимое -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Левая колонка: Информация -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-2xl font-bold mb-4"> Необходимые документы</h2>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Паспорт гражданина РФ (оригинал + копия)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Аттестат о среднем образовании (оригинал + копия)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                СНИЛС (копия)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                4 фотографии 3×4 см
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Медицинская справка (форма 086/у)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-2xl font-bold mb-4"> Сроки приема</h2>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-600 pl-4">
+                                <p class="font-semibold">Начало приема документов</p>
+                                <p class="text-gray-600">20 июня 2026</p>
+                            </div>
+                            <div class="border-l-4 border-yellow-600 pl-4">
+                                <p class="font-semibold">Окончание приема (на бюджет)</p>
+                                <p class="text-gray-600">15 августа 2026</p>
+                            </div>
+                            <div class="border-l-4 border-green-600 pl-4">
+                                <p class="font-semibold">Окончание приема (на платное)</p>
+                                <p class="text-gray-600">30 августа 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Форма подачи -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-6">📝 Электронная подача документов</h2>
+                    <form id="admissions-form" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">ФИО абитуриента *</label>
+                            <input type="text" name="fullname" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email *</label>
+                            <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Телефон *</label>
+                            <input type="tel" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Выберите специальность *</label>
+                            <select name="specialty" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500">
+                                <option value="">-- Выберите --</option>
+                                <option value="09.02.07">Информационные системы и программирование</option>
+                                <option value="38.02.01">Экономика и бухгалтерский учет</option>
+                                <option value="40.02.02">Правоохранительная деятельность</option>
+                                <option value="38.02.06">Финансы</option>
+                                <option value="38.02.07">Банковское дело</option>
+                                <option value="38.02.03">Операционная деятельность в логистике</option>
+                                <option value="38.02.04">Коммерция</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Загрузить документы (PDF) *</label>
+                            <input type="file" name="documents" accept=".pdf" multiple required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+                            <p class="text-sm text-gray-500 mt-1">Максимальный размер: 10 МБ, формат: PDF/A</p>
+                        </div>
+                        <div class="flex items-start">
+                            <input type="checkbox" name="consent" required class="mt-1">
+                            <label class="ml-2 text-gray-600">Я согласен на обработку персональных данных *</label>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                            Отправить заявку
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Экономико-правовой техникум</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

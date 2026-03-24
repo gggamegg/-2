@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание | Экономико-правовой техникум</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-xl font-bold">Экономико-правовой техникум</h1>
+        </div>
+    </header>
+
+    <!-- Заголовок -->
+    <section class="bg-blue-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold">Расписание занятий</h1>
+            <p class="mt-4 text-blue-100">Актуальное расписание на текущую неделю</p>
+        </div>
+    </section>
+
+    <!-- Фильтры и расписание -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            
+            <!-- Фильтры -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Группа</label>
+                        <select id="group-select" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+                            <option value="">Выберите группу</option>
+                            <option value="П-42">П-42 (Информационные системы)</option>
+                            <option value="Э-31">Э-31 (Экономика)</option>
+                            <option value="Ю-21">Ю-21 (Юриспруденция)</option>
+                            <option value="Б-11">Б-11 (Банковское дело)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Неделя</label>
+                        <select id="week-select" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+                            <option value="current">Текущая</option>
+                            <option value="next">Следующая</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button id="load-schedule" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Показать расписание
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Таблица расписания -->
+            <div id="schedule-container" class="bg-white rounded-lg shadow-md overflow-hidden hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-blue-600 text-white">
+                            <tr>
+                                <th class="px-4 py-3">День</th>
+                                <th class="px-4 py-3">Время</th>
+                                <th class="px-4 py-3">Предмет</th>
+                                <th class="px-4 py-3">Преподаватель</th>
+                                <th class="px-4 py-3">Аудитория</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body" class="divide-y divide-gray-200">
+                            <!-- Данные загружаются через JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Заглушка -->
+            <div id="schedule-placeholder" class="bg-white rounded-lg shadow-md p-12 text-center">
+                <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <p class="text-gray-600">Выберите группу и нажмите "Показать расписание"</p>
+            </div>
+
+            <!-- Экспорт -->
+            <div class="mt-8 text-center">
+                <button id="export-ics" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition">
+                    📥 Экспорт в календарь (.ics)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Экономико-правовой техникум</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

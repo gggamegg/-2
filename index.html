@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Экономико-правовой техникум - среднее профессиональное образование в Тольятти">
+    <title>Экономико-правовой техникум | Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка сайта -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="./img/channels4_profile.jpg" alt="Логотип" class="h-16 w-16">
+                    <div>
+                        <h1 class="text-xl font-bold">Экономико-правовой техникум</h1>
+                        <p class="text-sm text-blue-200">Автономная некоммерческая профессиональная образовательная организация</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-blue-200 transition">Главная</a>
+                    <a href="about.html" class="hover:text-blue-200 transition">О техникуме</a>
+                    <a href="specialties.html" class="hover:text-blue-200 transition">Специальности</a>
+                    <a href="admissions.html" class="hover:text-blue-200 transition">Абитуриенту</a>
+                    <a href="schedule.html" class="hover:text-blue-200 transition">Расписание</a>
+                    <a href="lms.html" class="hover:text-blue-200 transition">LMS</a>
+                    <a href="contacts.html" class="hover:text-blue-200 transition">Контакты</a>
+                </nav>
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800">
+            <nav class="flex flex-col py-4 px-4 space-y-2">
+                <a href="index.html" class="hover:text-blue-200">Главная</a>
+                <a href="about.html" class="hover:text-blue-200">О техникуме</a>
+                <a href="specialties.html" class="hover:text-blue-200">Специальности</a>
+                <a href="admissions.html" class="hover:text-blue-200">Абитуриенту</a>
+                <a href="schedule.html" class="hover:text-blue-200">Расписание</a>
+                <a href="lms.html" class="hover:text-blue-200">LMS</a>
+                <a href="contacts.html" class="hover:text-blue-200">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Добро пожаловать в Экономико-правовой техникум</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Современное среднее профессиональное образование в Тольятти. Готовим специалистов для цифровой экономики.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="admissions.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition">Подать документы</a>
+                <a href="specialties.html" class="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition">Выбрать специальность</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новости -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Последние новости</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="./img/den-otkrytyh-dverey-2030x1015.jpg" alt="Новость 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600">15 января 2026</span>
+                        <h3 class="text-xl font-semibold mt-2">День открытых дверей</h3>
+                        <p class="text-gray-600 mt-2">Приглашаем абитуриентов и их родителей...</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="./img/mart3.png" alt="Новость 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600">10 января 2026</span>
+                        <h3 class="text-xl font-semibold mt-2">18 марта была встреча со старшим инспектором МКУ «ЦПП»</h3>
+                        <p class="text-gray-600 mt-2">беседа по теме «Экстремизм ксенофобия»</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="./img/mart1.png" alt="Новость 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600">5 января 2026</span>
+                        <h3 class="text-xl font-semibold mt-2">11 марта была проведена игра « Информативная информатика»</h3>
+                        <p class="text-gray-600 mt-2">в игре были использованы задание на логику,
+
+базовых понятий по дисциплине информатика.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="bg-blue-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-blue-900">7</div>
+                    <div class="text-gray-600 mt-2">Специальностей</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-blue-900">1500+</div>
+                    <div class="text-gray-600 mt-2">Студентов</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-blue-900">85%</div>
+                    <div class="text-gray-600 mt-2">Трудоустройство</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-blue-900">20+</div>
+                    <div class="text-gray-600 mt-2">Партнеров</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ЭП Техникум</h3>
+                    <p class="text-gray-400">Современное образование для успешной карьеры</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Навигация</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white">О техникуме</a></li>
+                        <li><a href="specialties.html" class="hover:text-white">Специальности</a></li>
+                        <li><a href="admissions.html" class="hover:text-white">Абитуриенту</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакты</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 г. Тольятти </li>
+                        <li>📞 +7 (XXXX) XX-XX-XX</li>
+                        <li>✉️ tepcollege@yandex.ru</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Соцсети</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><a href= "https://vk.com/nashtekhnikum">  VK </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Экономико-правовой техникум. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

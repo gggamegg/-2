@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS | Экономико-правовой техникум</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">LMS - Система обучения</h1>
+                <div class="flex items-center space-x-4">
+                    <span id="user-name">Иванов И.И.</span>
+                    <button id="logout-btn" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition">Выйти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                
+                <!-- Боковое меню -->
+                <div class="md:col-span-1">
+                    <nav class="bg-white rounded-lg shadow-md p-4 space-y-2">
+                        <a href="#" class="block px-4 py-2 bg-blue-100 text-blue-600 rounded-lg font-semibold">📚 Мои курсы</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg"> Задания</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg"> Успеваемость</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg"> Расписание</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg"> Сообщения</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg"> Настройки</a>
+                    </nav>
+                </div>
+
+                <!-- Основной контент -->
+                <div class="md:col-span-3">
+                    <!-- Статистика -->
+                    <div class="grid md:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                            <div class="text-3xl font-bold text-blue-600">5</div>
+                            <div class="text-gray-600">Активных курсов</div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                            <div class="text-3xl font-bold text-green-600">12</div>
+                            <div class="text-gray-600">Выполненных заданий</div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                            <div class="text-3xl font-bold text-yellow-600">4.5</div>
+                            <div class="text-gray-600">Средний балл</div>
+                        </div>
+                    </div>
+
+                    <!-- Курсы -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-2xl font-bold mb-6">Мои курсы</h2>
+                        <div class="space-y-4">
+                            
+                            <!-- Курс 1 -->
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Основы программирования</h3>
+                                        <p class="text-gray-600">Преподаватель: Петров А.С.</p>
+                                    </div>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Активен</span>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                        <span>Прогресс</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 flex space-x-2">
+                                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition">Перейти к курсу</a>
+                                    <a href="#" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg text-sm transition">Материалы</a>
+                                </div>
+                            </div>
+
+                            <!-- Курс 2 -->
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Базы данных</h3>
+                                        <p class="text-gray-600">Преподаватель: Сидорова Е.В.</p>
+                                    </div>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Активен</span>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                        <span>Прогресс</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 flex space-x-2">
+                                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition">Перейти к курсу</a>
+                                    <a href="#" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg text-sm transition">Материалы</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Ближайшие дедлайны -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mt-8">
+                        <h2 class="text-2xl font-bold mb-6">Ближайшие дедлайны</h2>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                                <div>
+                                    <p class="font-semibold">Лабораторная работа №3</p>
+                                    <p class="text-sm text-gray-600">Основы программирования</p>
+                                </div>
+                                <span class="text-yellow-600 font-semibold">Завтра, 23:59</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-red-50 rounded-lg">
+                                <div>
+                                    <p class="font-semibold">Курсовой проект</p>
+                                    <p class="text-sm text-gray-600">Базы данных</p>
+                                </div>
+                                <span class="text-red-600 font-semibold">3 дня</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Экономико-правовой техникум</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

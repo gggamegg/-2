@@ -1,0 +1,10 @@
+# Защита от XSS
+Header set X-XSS-Protection "1; mode=block"
+
+# Защита от clickjacking
+Header set X-Frame-Options "SAMEORIGIN"
+
+# HTTPS принудительно
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
